@@ -38,6 +38,32 @@ api.interceptors.request.use(
     }
 );
 
+// Add a response interceptor to handle expired/invalid tokens
+api.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+            // Clear stale auth data from both storages
+            const isAuthRequest = error.config?.url?.includes('/auth/');
+            if (!isAuthRequest) {
+                // Only auto-logout on non-auth endpoints
+                localStorage.removeItem('token');
+                sessionStorage.removeItem('token');
+                // Keep 'user' so AuthContext knows to redirect; it will be cleared on next load
+                // Redirect to login page if not already there
+                if (!window.location.pathname.includes('/login') &&
+                    !window.location.pathname.includes('/verify-otp')) {
+                    // Remove user data to force re-login
+                    localStorage.removeItem('user');
+                    sessionStorage.removeItem('user');
+                    window.location.href = '/login';
+                }
+            }
+        }
+        return Promise.reject(error);
+    }
+);
+
 // Auth services
 export const register = (userData) => {
     return api.post('/auth/signup', userData);

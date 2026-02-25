@@ -9,7 +9,7 @@ const Login = ({ isModal = false, onSwitch }) => {
     const navigate = useNavigate();
     const { login } = useAuth();
     const [searchParams] = useSearchParams();
-    const [formData, setFormData] = useState({ email: '', password: '', rememberMe: false });
+    const [formData, setFormData] = useState({ usernameOrEmail: '', password: '', rememberMe: false });
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
@@ -34,18 +34,18 @@ const Login = ({ isModal = false, onSwitch }) => {
     }, []);
 
     const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const isEmailValid = formData.email && validateEmail(formData.email);
+    const isEmailValid = formData.usernameOrEmail && formData.usernameOrEmail.length >= 3;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!formData.email || !formData.password) {
+        if (!formData.usernameOrEmail || !formData.password) {
             setError("Please fill in all fields");
             return;
         }
         setIsLoading(true);
         setError('');
         try {
-            const response = await loginApi({ username: formData.email, password: formData.password });
+            const response = await loginApi({ username: formData.usernameOrEmail, password: formData.password });
             if (response.status === 200 && response.data) {
                 const storage = formData.rememberMe ? localStorage : sessionStorage;
                 if (response.data.accessToken) storage.setItem('token', response.data.accessToken);
@@ -133,7 +133,7 @@ const Login = ({ isModal = false, onSwitch }) => {
                         className="block text-xs font-bold uppercase tracking-widest mb-2"
                         style={{ color: focusedField === 'email' ? '#10B981' : 'var(--text-secondary)' }}
                     >
-                        Email Address
+                        Email or Username
                     </label>
                     <div className="relative">
                         <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none transition-colors duration-300"
@@ -141,10 +141,10 @@ const Login = ({ isModal = false, onSwitch }) => {
                             <Mail size={18} />
                         </div>
                         <input
-                            type="email"
-                            placeholder="user@ecosmart.io"
-                            value={formData.email}
-                            onChange={(e) => handleChange('email', e.target.value)}
+                            type="text"
+                            placeholder="username or email@example.com"
+                            value={formData.usernameOrEmail}
+                            onChange={(e) => handleChange('usernameOrEmail', e.target.value)}
                             onFocus={() => setFocusedField('email')}
                             onBlur={() => handleBlur('email')}
                             className="w-full pl-12 pr-4 py-4 rounded-xl text-sm font-medium transition-all duration-300 outline-none"
