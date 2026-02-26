@@ -129,7 +129,7 @@ public class DataSeeder implements CommandLineRunner {
             return;
 
         Long ownerId = homeowner.getId();
-        if (deviceRepository.countByOwnerId(ownerId) > 0) {
+        if (deviceRepository.countByUserIdAndIsDeletedFalse(ownerId) > 0) {
             log.info("Demo devices already exist for homeowner_user – skipping seed.");
             return;
         }
@@ -146,13 +146,13 @@ public class DataSeeder implements CommandLineRunner {
 
         for (DeviceSeed s : seeds) {
             Device device = new Device();
-            device.setOwnerId(ownerId);
+            device.setUser(homeowner);
             device.setName(s.name);
             device.setType(s.type);
             device.setLocation(s.location);
-            device.setPowerRating(s.powerKw);
+            device.setPowerRating((float) (s.powerKw * 1000));
             device.setDescription(s.description);
-            device.setStatus("active");
+            device.setStatus(DeviceStatus.ON);
             device.setOnline(true);
             device.setLastActive(seedEnd);
             Device saved = deviceRepository.save(device);
@@ -170,7 +170,7 @@ public class DataSeeder implements CommandLineRunner {
 
                     EnergyUsageLog logEntry = new EnergyUsageLog();
                     logEntry.setDevice(saved);
-                    logEntry.setEnergyUsage(energyKwh);
+                    logEntry.setEnergyUsed((float) energyKwh);
                     logEntry.setTimestamp(tick);
                     logEntry.setDurationMinutes(60);
                     logEntry.setCost(cost);

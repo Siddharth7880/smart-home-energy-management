@@ -11,7 +11,9 @@ import com.smarthome.energy.repository.DeviceRepository;
 import com.smarthome.energy.repository.EnergyUsageLogRepository;
 import com.smarthome.energy.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +26,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class EnergyUsageLogService {
+
+    @Value("${smarthome.app.energyRatePerKwh:8.0}")
+    private double energyRatePerKwh;
 
     @Autowired
     private EnergyUsageLogRepository energyUsageLogRepository;
@@ -40,20 +45,20 @@ public class EnergyUsageLogService {
         if (userId == null)
             throw new UnauthorizedAccessException("User not authenticated");
 
-        Device device = deviceRepository.findById(deviceId)
+        Device device = deviceRepository.findByIdAndIsDeletedFalse(deviceId)
                 .orElseThrow(() -> new ResourceNotFoundException("Device", "id", deviceId));
 
-        if (!device.getOwnerId().equals(userId)) {
+        if (!hasRole("ROLE_ADMIN") && !device.getUser().getId().equals(userId)) {
             throw new UnauthorizedAccessException("Access denied: you do not own this device");
         }
 
-        if (request.getEnergyUsage() == null || request.getEnergyUsage() < 0) {
+        if (request.getEnergyUsed() == null || request.getEnergyUsed() < 0) {
             throw new IllegalArgumentException("Energy usage must be a positive number");
         }
 
         EnergyUsageLog log = new EnergyUsageLog();
         log.setDevice(device);
-        log.setEnergyUsage(request.getEnergyUsage());
+        log.setEnergyUsed(request.getEnergyUsed());
 
         if (request.getTimestamp() != null) {
             log.setTimestamp(request.getTimestamp());
@@ -68,8 +73,8 @@ public class EnergyUsageLogService {
         if (request.getCost() != null) {
             log.setCost(request.getCost());
         } else {
-            // Estimate cost: assuming $5 per kWh
-            log.setCost(request.getEnergyUsage() * 5.0);
+            // Use configurable rate per kWh
+            log.setCost(request.getEnergyUsed() * energyRatePerKwh);
         }
 
         EnergyUsageLog savedLog = energyUsageLogRepository.save(log);
@@ -84,9 +89,9 @@ public class EnergyUsageLogService {
         if (userId == null)
             throw new UnauthorizedAccessException("User not authenticated");
 
-        Device device = deviceRepository.findById(deviceId)
+        Device device = deviceRepository.findByIdAndIsDeletedFalse(deviceId)
                 .orElseThrow(() -> new ResourceNotFoundException("Device", "id", deviceId));
-        if (!device.getOwnerId().equals(userId)) {
+        if (!hasRole("ROLE_ADMIN") && !hasRole("ROLE_TECHNICIAN") && !device.getUser().getId().equals(userId)) {
             throw new UnauthorizedAccessException("Access denied: you do not own this device");
         }
 
@@ -105,9 +110,9 @@ public class EnergyUsageLogService {
         if (userId == null)
             throw new UnauthorizedAccessException("User not authenticated");
 
-        Device device = deviceRepository.findById(deviceId)
+        Device device = deviceRepository.findByIdAndIsDeletedFalse(deviceId)
                 .orElseThrow(() -> new ResourceNotFoundException("Device", "id", deviceId));
-        if (!device.getOwnerId().equals(userId)) {
+        if (!hasRole("ROLE_ADMIN") && !hasRole("ROLE_TECHNICIAN") && !device.getUser().getId().equals(userId)) {
             throw new UnauthorizedAccessException("Access denied: you do not own this device");
         }
 
@@ -126,9 +131,9 @@ public class EnergyUsageLogService {
         if (userId == null)
             throw new UnauthorizedAccessException("User not authenticated");
 
-        Device device = deviceRepository.findById(deviceId)
+        Device device = deviceRepository.findByIdAndIsDeletedFalse(deviceId)
                 .orElseThrow(() -> new ResourceNotFoundException("Device", "id", deviceId));
-        if (!device.getOwnerId().equals(userId)) {
+        if (!hasRole("ROLE_ADMIN") && !hasRole("ROLE_TECHNICIAN") && !device.getUser().getId().equals(userId)) {
             throw new UnauthorizedAccessException("Access denied: you do not own this device");
         }
 
@@ -164,7 +169,7 @@ public class EnergyUsageLogService {
         if (userId == null)
             throw new UnauthorizedAccessException("User not authenticated");
 
-        List<Device> devices = deviceRepository.findByOwnerId(userId);
+        List<Device> devices = deviceRepository.findByUserIdAndIsDeletedFalse(userId);
         Map<String, Object> allLogs = new HashMap<>();
         List<Map<String, Object>> deviceLogs = new java.util.ArrayList<>();
 
@@ -232,7 +237,7 @@ public class EnergyUsageLogService {
         response.setId(log.getId());
         response.setDeviceId(log.getDevice().getId());
         response.setDeviceName(log.getDevice().getName());
-        response.setEnergyUsage(log.getEnergyUsage());
+        response.setEnergyUsed(log.getEnergyUsed());
         response.setTimestamp(log.getTimestamp());
         response.setDurationMinutes(log.getDurationMinutes());
         response.setCost(log.getCost());
@@ -249,6 +254,18 @@ public class EnergyUsageLogService {
             return ((UserDetailsImpl) authentication.getPrincipal()).getId();
         }
         return null;
+    }
+
+    /**
+     * Helper: Check if current user has a specific role
+     */
+    private boolean hasRole(String role) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null)
+            return false;
+        return authentication.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .anyMatch(role::equals);
     }
 
     /**

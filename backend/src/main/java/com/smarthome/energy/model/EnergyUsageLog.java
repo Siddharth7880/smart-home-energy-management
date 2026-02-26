@@ -5,31 +5,31 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "energy_usage_logs", indexes = {
-    @Index(name = "idx_device_id", columnList = "device_id"),
-    @Index(name = "idx_timestamp", columnList = "timestamp"),
-    @Index(name = "idx_device_timestamp", columnList = "device_id, timestamp")
+        @Index(name = "idx_device_id", columnList = "device_id"),
+        @Index(name = "idx_timestamp", columnList = "timestamp"),
+        @Index(name = "idx_device_timestamp", columnList = "device_id, timestamp")
 })
 public class EnergyUsageLog {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "device_id", nullable = false)
     private Device device;
 
-    @Column(name = "energy_usage", nullable = false)
-    private Double energyUsage;  // in kWh
+    @Column(name = "energy_used", nullable = false)
+    private Float energyUsed; // in kWh
 
     @Column(nullable = false)
     private LocalDateTime timestamp;
 
     @Column(name = "duration_minutes")
-    private Integer durationMinutes;  // Duration of the measurement in minutes
+    private Integer durationMinutes; // Duration of the measurement in minutes
 
     @Column(name = "cost")
-    private Double cost;  // Estimated cost based on energy usage
+    private Double cost; // Estimated cost based on energy usage
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -45,16 +45,16 @@ public class EnergyUsageLog {
     public EnergyUsageLog() {
     }
 
-    public EnergyUsageLog(Device device, Double energyUsage, LocalDateTime timestamp) {
+    public EnergyUsageLog(Device device, Float energyUsed, LocalDateTime timestamp) {
         this.device = device;
-        this.energyUsage = energyUsage;
+        this.energyUsed = energyUsed;
         this.timestamp = timestamp;
         this.createdAt = LocalDateTime.now();
     }
 
-    public EnergyUsageLog(Device device, Double energyUsage, LocalDateTime timestamp, Integer durationMinutes) {
+    public EnergyUsageLog(Device device, Float energyUsed, LocalDateTime timestamp, Integer durationMinutes) {
         this.device = device;
-        this.energyUsage = energyUsage;
+        this.energyUsed = energyUsed;
         this.timestamp = timestamp;
         this.durationMinutes = durationMinutes;
         this.createdAt = LocalDateTime.now();
@@ -77,12 +77,12 @@ public class EnergyUsageLog {
         this.device = device;
     }
 
-    public Double getEnergyUsage() {
-        return energyUsage;
+    public Float getEnergyUsed() {
+        return energyUsed;
     }
 
-    public void setEnergyUsage(Double energyUsage) {
-        this.energyUsage = energyUsage;
+    public void setEnergyUsed(Float energyUsed) {
+        this.energyUsed = energyUsed;
     }
 
     public LocalDateTime getTimestamp() {
@@ -122,7 +122,7 @@ public class EnergyUsageLog {
         return "EnergyUsageLog{" +
                 "id=" + id +
                 ", deviceId=" + (device != null ? device.getId() : null) +
-                ", energyUsage=" + energyUsage +
+                ", energyUsed=" + energyUsed +
                 ", timestamp=" + timestamp +
                 ", durationMinutes=" + durationMinutes +
                 ", cost=" + cost +

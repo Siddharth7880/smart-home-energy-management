@@ -1,6 +1,7 @@
 package com.smarthome.energy.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.smarthome.energy.model.DeviceStatus;
 import java.time.LocalDateTime;
 
 public class DeviceResponse {
@@ -10,20 +11,20 @@ public class DeviceResponse {
     private String type;
     private String description;
     private String location;
-    private Double powerRating;
-    private String status;
+    private Float powerRating;
+    private DeviceStatus status;
     private boolean isOnline;
     private LocalDateTime lastActive;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private Double currentEnergyUsage;
-    private Double totalEnergyUsage;
+    private Float currentEnergyUsage;
+    private Float totalEnergyUsage;
 
     public DeviceResponse() {
     }
 
     public DeviceResponse(Long id, String name, String type, String description, String location,
-            Double powerRating, String status, boolean isOnline) {
+            Float powerRating, DeviceStatus status, boolean isOnline) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -83,19 +84,19 @@ public class DeviceResponse {
         this.location = location;
     }
 
-    public Double getPowerRating() {
+    public Float getPowerRating() {
         return powerRating;
     }
 
-    public void setPowerRating(Double powerRating) {
+    public void setPowerRating(Float powerRating) {
         this.powerRating = powerRating;
     }
 
-    public String getStatus() {
+    public DeviceStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(DeviceStatus status) {
         this.status = status;
     }
 
@@ -133,19 +134,19 @@ public class DeviceResponse {
         this.updatedAt = updatedAt;
     }
 
-    public Double getCurrentEnergyUsage() {
+    public Float getCurrentEnergyUsage() {
         return currentEnergyUsage;
     }
 
-    public void setCurrentEnergyUsage(Double currentEnergyUsage) {
+    public void setCurrentEnergyUsage(Float currentEnergyUsage) {
         this.currentEnergyUsage = currentEnergyUsage;
     }
 
-    public Double getTotalEnergyUsage() {
+    public Float getTotalEnergyUsage() {
         return totalEnergyUsage;
     }
 
-    public void setTotalEnergyUsage(Double totalEnergyUsage) {
+    public void setTotalEnergyUsage(Float totalEnergyUsage) {
         this.totalEnergyUsage = totalEnergyUsage;
     }
 }

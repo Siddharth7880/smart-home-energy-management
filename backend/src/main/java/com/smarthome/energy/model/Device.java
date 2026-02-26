@@ -11,8 +11,9 @@ public class Device {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private Long ownerId; // Homeowner ID
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user; // Homeowner
 
     @Column(nullable = false)
     private String name;
@@ -25,10 +26,14 @@ public class Device {
     private String location;
 
     @Column(name = "power_rating")
-    private Double powerRating; // in kW
+    private Float powerRating; // in watts (W)
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String status; // "active", "inactive", "maintenance"
+    private DeviceStatus status; // ON, OFF
+
+    @Column(name = "is_deleted", nullable = false)
+    private boolean isDeleted = false;
 
     @Column(name = "is_online", nullable = false)
     private boolean isOnline;
@@ -56,8 +61,9 @@ public class Device {
     protected void onCreate() {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
-        status = "active";
-        isOnline = true;
+        if (status == null) {
+            status = DeviceStatus.OFF;
+        }
     }
 
     @PreUpdate
@@ -68,14 +74,15 @@ public class Device {
     public Device() {
     }
 
-    public Device(Long ownerId, String name, String type, String location, Double powerRating) {
-        this.ownerId = ownerId;
+    public Device(User user, String name, String type, String location, Float powerRating) {
+        this.user = user;
         this.name = name;
         this.type = type;
         this.location = location;
         this.powerRating = powerRating;
-        this.status = "active";
-        this.isOnline = true;
+        this.status = DeviceStatus.OFF;
+        this.isOnline = false;
+        this.isDeleted = false;
     }
 
     // Getters and Setters
@@ -87,12 +94,12 @@ public class Device {
         this.id = id;
     }
 
-    public Long getOwnerId() {
-        return ownerId;
+    public User getUser() {
+        return user;
     }
 
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getName() {
@@ -127,20 +134,28 @@ public class Device {
         this.location = location;
     }
 
-    public Double getPowerRating() {
+    public Float getPowerRating() {
         return powerRating;
     }
 
-    public void setPowerRating(Double powerRating) {
+    public void setPowerRating(Float powerRating) {
         this.powerRating = powerRating;
     }
 
-    public String getStatus() {
+    public DeviceStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(DeviceStatus status) {
         this.status = status;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
     }
 
     public boolean isOnline() {

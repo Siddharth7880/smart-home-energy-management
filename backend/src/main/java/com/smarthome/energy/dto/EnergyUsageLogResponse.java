@@ -6,7 +6,7 @@ public class EnergyUsageLogResponse {
     private Long id;
     private Long deviceId;
     private String deviceName;
-    private Double energyUsage;
+    private Float energyUsed;
     private LocalDateTime timestamp;
     private Integer durationMinutes;
     private Double cost;
@@ -15,12 +15,12 @@ public class EnergyUsageLogResponse {
     public EnergyUsageLogResponse() {
     }
 
-    public EnergyUsageLogResponse(Long id, Long deviceId, String deviceName, Double energyUsage, 
-                                  LocalDateTime timestamp, Integer durationMinutes, Double cost) {
+    public EnergyUsageLogResponse(Long id, Long deviceId, String deviceName, Float energyUsed,
+            LocalDateTime timestamp, Integer durationMinutes, Double cost) {
         this.id = id;
         this.deviceId = deviceId;
         this.deviceName = deviceName;
-        this.energyUsage = energyUsage;
+        this.energyUsed = energyUsed;
         this.timestamp = timestamp;
         this.durationMinutes = durationMinutes;
         this.cost = cost;
@@ -51,12 +51,12 @@ public class EnergyUsageLogResponse {
         this.deviceName = deviceName;
     }
 
-    public Double getEnergyUsage() {
-        return energyUsage;
+    public Float getEnergyUsed() {
+        return energyUsed;
     }
 
-    public void setEnergyUsage(Double energyUsage) {
-        this.energyUsage = energyUsage;
+    public void setEnergyUsed(Float energyUsed) {
+        this.energyUsed = energyUsed;
     }
 
     public LocalDateTime getTimestamp() {

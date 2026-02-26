@@ -1,8 +1,11 @@
 package com.smarthome.energy.dto;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class CreateDeviceRequest {
+
     @NotBlank(message = "Device name is required")
     private String name;
 
@@ -11,13 +14,17 @@ public class CreateDeviceRequest {
 
     private String description;
     private String location;
-    private Double powerRating;
+
+    @NotNull(message = "Power rating is required")
+    @Min(value = 1, message = "Power rating must be at least 1 watt")
+    private Float powerRating;
+
     private String status;
 
     public CreateDeviceRequest() {
     }
 
-    public CreateDeviceRequest(String name, String type, String description, String location, Double powerRating) {
+    public CreateDeviceRequest(String name, String type, String description, String location, Float powerRating) {
         this.name = name;
         this.type = type;
         this.description = description;
@@ -58,11 +65,11 @@ public class CreateDeviceRequest {
         this.location = location;
     }
 
-    public Double getPowerRating() {
+    public Float getPowerRating() {
         return powerRating;
     }
 
-    public void setPowerRating(Double powerRating) {
+    public void setPowerRating(Float powerRating) {
         this.powerRating = powerRating;
     }
 

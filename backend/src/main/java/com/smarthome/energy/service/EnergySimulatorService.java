@@ -54,7 +54,7 @@ public class EnergySimulatorService {
     @Scheduled(fixedRate = 3_600_000) // every 60 minutes
     @Transactional
     public void simulateHourlyEnergyLogs() {
-        List<Device> onlineDevices = deviceRepository.findByIsOnline(true);
+        List<Device> onlineDevices = deviceRepository.findByIsOnlineAndIsDeletedFalse(true);
 
         if (onlineDevices.isEmpty()) {
             logger.debug("EnergySimulator: no online devices, skipping tick.");
@@ -66,20 +66,19 @@ public class EnergySimulatorService {
 
         for (Device device : onlineDevices) {
             try {
-                double powerKw = resolveEffectivePowerKw(device);
-                if (powerKw <= 0)
+                double powerWatts = resolveEffectivePowerWatts(device);
+                if (powerWatts <= 0)
                     continue;
 
-                // Apply ±15 % random variation
-                double variation = 1.0 + (random.nextDouble() * 0.30 - 0.15);
-                double energyKwh = powerKw * (TICK_DURATION_MINUTES / 60.0) * variation;
+                // Exact formula: (Watts / 1000) * hours
+                double energyKwh = (powerWatts / 1000.0) * (TICK_DURATION_MINUTES / 60.0);
                 energyKwh = Math.round(energyKwh * 10000.0) / 10000.0; // 4 dp
 
                 double cost = Math.round(energyKwh * COST_PER_KWH * 100.0) / 100.0;
 
                 EnergyUsageLog log = new EnergyUsageLog();
                 log.setDevice(device);
-                log.setEnergyUsage(energyKwh);
+                log.setEnergyUsed((float) energyKwh);
                 log.setTimestamp(now);
                 log.setDurationMinutes(TICK_DURATION_MINUTES);
                 log.setCost(cost);
@@ -105,31 +104,31 @@ public class EnergySimulatorService {
      * Returns the effective power rating for a device.
      * Falls back to sensible defaults when the owner hasn't set one.
      */
-    private double resolveEffectivePowerKw(Device device) {
+    private double resolveEffectivePowerWatts(Device device) {
         if (device.getPowerRating() != null && device.getPowerRating() > 0) {
             return device.getPowerRating();
         }
-        // Default power ratings by device type (kW)
+        // Default power ratings by device type (Watts)
         if (device.getType() == null)
-            return 0.1;
+            return 100.0;
         return switch (device.getType().toLowerCase()) {
-            case "air_conditioner" -> 1.5;
-            case "heater" -> 2.0;
-            case "water_heater" -> 3.0;
-            case "washer" -> 0.5;
-            case "dryer" -> 2.5;
-            case "refrigerator" -> 0.15;
-            case "ev_charger" -> 7.2;
+            case "air_conditioner" -> 1500.0;
+            case "heater" -> 2000.0;
+            case "water_heater" -> 3000.0;
+            case "washer" -> 500.0;
+            case "dryer" -> 2500.0;
+            case "refrigerator" -> 150.0;
+            case "ev_charger" -> 7200.0;
             case "solar_panel" -> 0.0; // generates, not consumes – skip
-            case "smart_meter" -> 0.01;
-            case "thermostat" -> 0.05;
-            case "bulb", "lighting" -> 0.01;
-            case "plug" -> 0.1;
-            case "lock" -> 0.005;
-            case "speaker" -> 0.03;
-            case "camera" -> 0.008;
-            case "hvac" -> 1.8;
-            default -> 0.1;
+            case "smart_meter" -> 10.0;
+            case "thermostat" -> 50.0;
+            case "bulb", "lighting" -> 10.0;
+            case "plug" -> 100.0;
+            case "lock" -> 5.0;
+            case "speaker" -> 30.0;
+            case "camera" -> 8.0;
+            case "hvac" -> 1800.0;
+            default -> 100.0;
         };
     }
 }

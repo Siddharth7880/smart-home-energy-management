@@ -137,6 +137,18 @@ export const deviceApi = {
         api.get('/devices/logs/all', { params: { period } }),
     deleteOldLogs: (beforeDate) =>
         api.delete('/devices/logs/old', { params: { beforeDate } }),
+
+    // ── Milestone 2 additions ──
+    toggleDevice: (deviceId) => api.patch(`/devices/${deviceId}/toggle`),
+    getTotalPower: () => api.get('/devices/total-power'),
+};
+
+// Usage Log services (Milestone 2 — /api/usage/* routes)
+export const usageApi = {
+    addLog: (deviceId, data) => api.post(`/usage/${deviceId}`, data),
+    getLogs: (deviceId) => api.get(`/usage/${deviceId}`),
+    getLogsByRange: (deviceId, from, to) =>
+        api.get(`/usage/${deviceId}`, { params: { from, to } }),
 };
 
 // Technician services
