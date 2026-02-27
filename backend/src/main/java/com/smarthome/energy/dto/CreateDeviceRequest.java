@@ -1,6 +1,6 @@
 package com.smarthome.energy.dto;
 
-import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -16,7 +16,7 @@ public class CreateDeviceRequest {
     private String location;
 
     @NotNull(message = "Power rating is required")
-    @Min(value = 1, message = "Power rating must be at least 1 watt")
+    @DecimalMin(value = "0.001", message = "Power rating must be at least 1 watt")
     private Float powerRating;
 
     private String status;

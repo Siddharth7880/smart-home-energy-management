@@ -51,7 +51,15 @@ const Login = ({ isModal = false, onSwitch }) => {
                 if (response.data.accessToken) storage.setItem('token', response.data.accessToken);
                 login(response.data, formData.rememberMe);
                 setIsLoading(false);
-                navigate('/dashboard');
+
+                const roles = response.data.roles || [];
+                if (roles.includes('ROLE_TECHNICIAN') && !roles.includes('ROLE_ADMIN') && !roles.includes('ROLE_HOMEOWNER')) {
+                    navigate('/technician');
+                } else if (roles.includes('ROLE_ADMIN') && !roles.includes('ROLE_HOMEOWNER')) {
+                    navigate('/admin');
+                } else {
+                    navigate('/dashboard');
+                }
             }
         } catch (err) {
             setError(err.response?.data?.message || "Login failed. Please check your credentials.");

@@ -40,7 +40,7 @@ function AnimatedRoutes() {
           path="/dashboard"
           element={
             <PageTransition>
-              <ProtectedRoute allowedRoles={['ROLE_ADMIN', 'ROLE_HOMEOWNER', 'ROLE_TECHNICIAN']}>
+              <ProtectedRoute allowedRoles={['ROLE_ADMIN', 'ROLE_HOMEOWNER']}>
                 <Dashboard />
               </ProtectedRoute>
             </PageTransition>

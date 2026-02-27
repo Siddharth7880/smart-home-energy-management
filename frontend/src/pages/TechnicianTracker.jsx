@@ -27,7 +27,7 @@ const TechnicianTracker = () => {
         setError(null);
         try {
             const res = await technicianApi.getMyInstallations();
-            setInstallations(res.data.installations || []);
+            setInstallations(Array.isArray(res.data) ? res.data : (res.data.installations || []));
         } catch (err) {
             setError(err.response?.data?.message || 'Failed to load installations');
             console.error('Error:', err);
