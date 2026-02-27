@@ -70,6 +70,8 @@ As a primary **Backend Developer** for this project, I engineered robust and sec
 - **Comprehensive Testing Suite:** Developed rigorous edge-case unit testing utilizing JUnit 5 and Mockito, thoroughly verifying Milestone 2 features including `DeviceService` and `EnergyUsageLogService` reliability under stress environments.
 - **Milestone Feature Delivery:** Orchestrated the dynamic device tracking mechanisms, energy usage log generation logic simulation, and API endpoint robustification.
 
+📥 **[Download Milestone 2 Presentation (PPTX)](Milestone-2-Backend-Achievements.pptx)**
+
 <br/>
 
 ## 📸 Screenshots
