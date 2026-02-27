@@ -14,12 +14,11 @@
 
   <p>
     <a href="#-tech-stack">Tech Stack</a> •
-    <a href="#-key-features">Features</a> •
+    <a href="#-live-features">Features</a> •
     <a href="#-my-contribution-backend-developer">My Contribution</a> •
     <a href="#-screenshots">Screenshots</a> •
-    <a href="#-getting-started">Getting Started</a> •
-    <a href="#-api-endpoints">API</a> •
-    <a href="#-contributing">Contributing</a>
+    <a href="#-setup-instructions">Getting Started</a> •
+    <a href="#-api-endpoints">API</a>
   </p>
 </div>
 
@@ -29,47 +28,39 @@
 
 The **Smart Home Energy Management System** allows homeowners to track their energy usage effortlessly, helping reduce carbon footprints and electricity bills. Built with a robust backend and a highly interactive front end, it securely manages real-time monitoring and user roles.
 
-<br/>
-
 ## 🛠️ Tech Stack
 
-### Backend Infrastructure
-- **Core Platform:** Java 17, Spring Boot 3.4.2
-- **Security:** Spring Security, JWT (JSON Web Tokens), OAuth2 integration, BCrypt for password hashing
-- **Persistence:** Spring Data JPA, Hibernate, MySQL 8
-- **Build Tool:** Maven
+### Backend
+- **Java 17** with Spring Boot 3.4.2
+- **Spring Security** with JWT authentication
+- **Spring Data JPA** for database operations
+- **MySQL** database
 
-### Frontend Experience
-- **Core Library:** React 19 (Hooks-heavy architecture)
-- **Tooling:** Vite for lightning-quick builds
-- **Styling:** Tailwind CSS 4, UI Component Ecosystem
-- **Animations:** Framer Motion for smooth, highly professional micro-interactions
-- **Networking/Routing:** Axios for API requests, React Router for seamless SPA navigation
+### Frontend
+- **React 19** with Vite
+- **Tailwind CSS 4** for styling
+- **Framer Motion** for animations
+- **Axios** for API calls
+- **React Router** for navigation
 
-<br/>
+## 📋 Prerequisites
 
-## ✨ Key Features
+Before you begin, ensure you have the following installed:
+- Java 17 or higher
+- Node.js 18 or higher
+- MySQL 8.0 or higher
+- Maven (or use the included Maven wrapper)
 
-### 🔒 Enterprise-Grade Security
-- **JWT-Based Authentication**: Secure session handling for the API layer.
-- **Robust Registration Flow**: Email validation, one-time passwords (OTP), and encrypted credentials.
-- **OAuth2 Login**: Google Sign-In capability mapping correctly to native user accounts.
-- **Role-Based Access Control (RBAC)**: Fine-grained permissions for Homeowners, Technicians, and Admins.
+## 🚀 Live Features
 
-### 🍃 Exceptional User Interface & UX
-- **Beautiful Theming**: A deep, rich Emerald/Green palette emphasizing eco-friendliness and sustainability.
-- **Responsive Layout**: Seamlessly transition from desktop dashboard to mobile interfaces.
-- **Glass-Morphism Aesthetics**: Modern, frosted UI panels emphasizing clean data presentation.
-- **Animation Suite**: Smooth page transitions and dynamic data pop-ins configured with Framer Motion.
+- 🔐 Secure JWT Authentication
+- ⚡ Real-Time Energy Monitoring
+- 📊 Analytics Dashboard
+- 🏠 Smart Device Management
+- 🌙 Dark/Light Theme Toggle
+- 📱 Fully Responsive UI
 
-### 🔋 Energy & Device tracking
-- Add, update, and manage connected home devices.
-- Generate and visualize power usage data simulating real energy meters.
-- Analyze device uptime, active consumption, and historical trends.
-
-<br/>
-
-## �‍💻 My Contribution (Backend Developer)
+## 👨‍💻 My Contribution (Backend Developer)
 
 As a primary **Backend Developer** for this project, I engineered robust and secure server-side logic to power the platform. My key contributions include:
 
@@ -81,7 +72,7 @@ As a primary **Backend Developer** for this project, I engineered robust and sec
 
 <br/>
 
-## �📸 Screenshots
+## 📸 Screenshots
 
 Here is a glimpse of the application interfaces based on user roles. The UI was built with a keen eye for aesthetics, glassmorphism, and responsive behavior.
 
@@ -113,119 +104,215 @@ Here is a glimpse of the application interfaces based on user roles. The UI was 
 
 <br/>
 
-## 🚀 Getting Started
+## 📂 Project Milestones
 
-Follow these steps to establish a local development environment.
+### ✅ Milestone 1
+- Authentication
+- Database Integration
+- Basic Dashboard
 
-### Prerequisites
-- [Java 17+](https://adoptium.net/)
-- [Node.js 18+](https://nodejs.org/) & npm
-- [MySQL 8+](https://dev.mysql.com/downloads/)
-- [Git](https://git-scm.com/)
+### ✅ Milestone 2
+- Device CRUD Operations
+- Energy Tracking
+- Analytics Visualization
+- UI Enhancement
+- Performance Optimization
 
-### 1. Database Initialization
-1. Ensure your local MySQL server is running.
-2. The Spring Boot backend uses `createDatabaseIfNotExist=true` and will auto-generate the `smart_home_energy` database on startup.
-3. Prepare the backend configuration:
-```bash
-cp backend/src/main/resources/application.properties.example backend/src/main/resources/application.properties
-```
-*Be sure to edit `application.properties` with your specific MySQL credentials, JWT secret keys, and Google OAuth credentials.*
+## 🚀 Setup Instructions
 
-### 2. Backend Startup
-Open a terminal and build the backend:
+### 1. Database Setup
+
+1. Start your MySQL server
+2. The application will automatically create the database `smart_home_energy` on first run
+3. Copy the example config and fill in your credentials:
+   ```bash
+   cp backend/src/main/resources/application.properties.example backend/src/main/resources/application.properties
+   ```
+
+> **Note:** Edit `backend/src/main/resources/application.properties` with your MySQL credentials, email (Gmail App Password), Google OAuth client ID/secret, and JWT secret. See `application.properties.example` for all required keys.
+
+### 2. Backend Setup
+
+Navigate to the backend directory and run:
+
 ```bash
 cd backend
 
-# For Windows
+# Using Maven wrapper (Windows)
 mvnw.cmd clean install
 mvnw.cmd spring-boot:run
 
-# For macOS/Linux
-./mvnw clean install
-./mvnw spring-boot:run
+# Or using Maven directly
+mvn clean install
+mvn spring-boot:run
 ```
-> The API will mount and serve on `http://localhost:8080`.
 
-### 3. Frontend Startup
-Open a new terminal session, install UI dependencies, and spin up the frontend:
+The backend will start on `http://localhost:8080`
+
+### 3. Frontend Setup
+
+Open a new terminal, navigate to the frontend directory and run:
+
 ```bash
 cd frontend
 
-# Install package dependencies
+# Install dependencies
 npm install
 
-# Start the Vite development server
+# Start development server
 npm run dev
 ```
-> View the live UI at `http://localhost:5173`.
 
-<br/>
+The frontend will start on `http://localhost:5173`
 
-## 🔑 API Endpoints Overview
-
-The backend employs a RESTful architectural style.
+## 🎨 Features
 
 ### Authentication
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| **POST** | `/api/auth/signup` | Register a new system user |
-| **POST** | `/api/auth/signin` | Generate JWT after successful validation |
-| **POST** | `/api/auth/forgot-password`| Reset account access |
+- User registration with email validation
+- Secure login with JWT tokens
+- Password encryption with BCrypt
+- Forgot password functionality
+- Remember me option
 
-### Security Checks (Test)
-| Method | Endpoint | Description | Access Required |
-| :--- | :--- | :--- | :--- |
-| **GET** | `/api/test/all` | Public System heartbeat | None |
-| **GET** | `/api/test/user` | Fetch personal info | Valid JWT |
-| **GET** | `/api/test/tech` | Tech-specific dashboards | `RULE_TECH` |
+### User Roles
+- Homeowner
+- Technician
+- Admin
 
-*(Refer to internal documentation modules for full API specifics regarding devices and data logs).*
+### Design Theme
+- **Primary Color:** Green/Emerald theme for eco-friendly energy management
+- Modern, responsive UI with smooth animations
+- Glass-morphism design elements
+- Dark mode support (coming soon)
 
-<br/>
+## 📱 Pages
 
-## 🎨 System Architecture
+1. **Home** - Landing page with system overview
+2. **Login** - User authentication (Green-themed)
+3. **Register** - New user registration
+4. **Dashboard** - User dashboard with energy monitoring
+5. **Forgot Password** - Password recovery
 
-```text
-Smart Home Energy Management System
-├── backend                       (Spring Boot Services layer)
-│   └── src/main/java/com/smarthome/energy/
-│       ├── config/               (App properties, Email configs)  
-│       ├── controller/           (REST interfaces)
-│       ├── dto/                  (Data encapsulation & transport)
-│       ├── model/                (JPA Entities defined)
-│       ├── repository/           (Database execution via JPA)
-│       └── security/             (Custom Filter Chains, JWT Logic)
-├── frontend                      (React User Interface)
-│   └── src/
-│       ├── components/           (Atomic & complex UI pieces)
-│       ├── context/              (Global state context providers)
-│       ├── pages/                (Rendered main views)
-│       └── services/             (Axios endpoint wrappers)
+## 🔑 API Endpoints
+
+### Authentication
+- `POST /api/auth/signup` - Register new user
+- `POST /api/auth/signin` - User login
+- `POST /api/auth/forgot-password` - Password reset
+
+### Test Endpoints
+- `GET /api/test/all` - Public content
+- `GET /api/test/user` - User content (requires authentication)
+- `GET /api/test/tech` - Technician content (requires TECH role)
+- `GET /api/test/admin` - Admin content (requires ADMIN role)
+
+## 🔒 Security
+
+- JWT-based authentication
+- Password encryption using BCrypt
+- CORS enabled for frontend communication
+- Session management with Spring Security
+- Protected routes on both frontend and backend
+
+## 📁 Project Structure
+
+```
+Smart Home Energy Management System/
+├── backend/
+│   ├── src/main/java/com/smarthome/energy/
+│   │   ├── config/          # Security and app configuration
+│   │   ├── controller/      # REST API controllers
+│   │   ├── dto/             # Data Transfer Objects
+│   │   ├── model/           # Entity models
+│   │   ├── repository/      # JPA repositories
+│   │   ├── security/        # JWT and security services
+│   │   └── service/         # Business logic services
+│   └── src/main/resources/
+│       └── application.properties  # App configuration
+├── frontend/
+│   ├── src/
+│   │   ├── components/      # Reusable React components
+│   │   ├── context/         # React Context (Auth, Theme)
+│   │   ├── pages/           # Page components
+│   │   └── services/        # API services
+│   └── package.json
 └── README.md
 ```
 
-<br/>
+## 🎨 Color Scheme
 
-## 💡 Future Enhancements Roadmap
-- [ ] Incorporate WebSockets for live, real-time energy ticker streams.
-- [ ] Connect with genuine IoT API providers (e.g., Shelly API, Tuya) instead of simulation.
-- [ ] Extensive graphing library integrations for visual 30-day billing estimations.
-- [ ] Integrated global administrator panel with user moderation mechanics.
+The application uses a green color palette to represent eco-friendly energy management:
 
-<br/>
+- **Primary:** Green (#16a34a) to Emerald (#059669)
+- **Background:** Green gradient (green-50 to emerald-50)
+- **Accents:** Various shades of green for interactive elements
+- **Text:** Slate colors for optimal readability
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are always welcome! Feel free to check the [issues page](../../issues).
+## 🔧 Configuration
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### Backend Configuration
+Copy `backend/src/main/resources/application.properties.example` → `application.properties` and fill in your values:
 
-<br/>
+```properties
+# Database
+spring.datasource.url=jdbc:mysql://localhost:3306/smart_database?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=YOUR_MYSQL_PASSWORD
 
+# JWT Secret (use a long random string in production)
+smarthome.app.jwtSecret=REPLACE_WITH_A_LONG_RANDOM_SECRET_KEY
+smarthome.app.jwtExpirationMs=86400000
+
+# Gmail App Password (generate at https://myaccount.google.com/apppasswords)
+spring.mail.username=YOUR_EMAIL@gmail.com
+spring.mail.password=YOUR_GMAIL_APP_PASSWORD
+
+# Google OAuth2 (https://console.cloud.google.com/)
+spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID
+spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET
+```
+
+### Frontend Configuration
+Edit `frontend/src/services/api.js`:
+
+```javascript
+const API_BASE_URL = 'http://localhost:8080/api';
+```
+
+## 🐛 Troubleshooting
+
+### Backend Issues
+- **Port 8080 already in use:** Change the port in `application.properties`
+- **Database connection failed:** Verify MySQL is running and credentials are correct
+- **Build errors:** Ensure Java 17+ is installed
+
+### Frontend Issues
+- **Port 5173 already in use:** Vite will automatically use the next available port
+- **API connection failed:** Verify backend is running on port 8080
+- **Dependencies error:** Delete `node_modules` and run `npm install` again
+
+## 📝 Default Test Credentials
+
+After first run, you can create users through the registration page. The system starts with an empty database.
+
+## 🔜 Future Features
+
+- Real-time energy consumption monitoring
+- Device management and control
+- Energy usage analytics and reports
+- Bill estimation and predictions
+- Mobile app support
+- Smart device integration
+- Email notifications
+- Admin panel for user management
+
+## 📄 License
+
+This project is for educational purposes.
+
+## 👥 Support
+
+For issues or questions, please create an issue in the project repository.
 
 <hr/>
 <div align="center">
