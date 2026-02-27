@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed:
   ## 📸 Application Preview
 
 ### 🔐 Register Page
-<img src="Pictures\Screenshots\Screenshot 2026-02-27 124625.png" width="800"/>
+<img src="Screenshots\Screenshot 2026-02-27 124625.png" width="800"/>
 
 ### 🔐 Login Page
 <img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-26 232000.png" width="800"/>
