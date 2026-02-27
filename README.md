@@ -25,6 +25,63 @@ Before you begin, ensure you have the following installed:
 - MySQL 8.0 or higher
 - Maven (or use the included Maven wrapper)
 
+## 🚀 Live Features
+
+- 🔐 Secure JWT Authentication
+- ⚡ Real-Time Energy Monitoring
+- 📊 Analytics Dashboard
+- 🏠 Smart Device Management
+- 🌙 Dark/Light Theme Toggle
+- 📱 Fully Responsive UI
+
+  ## 📸 Application Preview
+
+### 🔐 Register Page
+<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 124625.png" width="800"/>
+
+### 🔐 Login Page
+<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-26 232000.png" width="800"/>
+
+### 📊 Owner Dashboard
+<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-26 232148.png" width="800"/>
+
+### ⚡ Owner Device Management
+<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 125107.png" width="800"/>
+
+### 📈 Owner Analytics
+<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 125123.png" width="800"/>
+
+---
+
+
+## 👨‍💻 My Contribution
+
+As the primary developer of this project, I was responsible for:
+
+- Designing complete backend architecture
+- Implementing secure JWT authentication
+- Creating scalable REST APIs
+- Database schema design
+- Building interactive React dashboard
+- Implementing device management module
+- Developing analytics system
+- Full frontend-backend integration
+- Debugging and optimization
+
+## 📂 Project Milestones
+
+### ✅ Milestone 1
+- Authentication
+- Database Integration
+- Basic Dashboard
+
+### ✅ Milestone 2
+- Device CRUD Operations
+- Energy Tracking
+- Analytics Visualization
+- UI Enhancement
+- Performance Optimization
+
 ## 🚀 Setup Instructions
 
 ### 1. Database Setup
