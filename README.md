@@ -34,25 +34,6 @@ Before you begin, ensure you have the following installed:
 - 🌙 Dark/Light Theme Toggle
 - 📱 Fully Responsive UI
 
-  ## 📸 Application Preview
-
-### 🔐 Register Page
-<img src="Screenshots\Screenshot 2026-02-27 124625.png" width="800"/>
-
-### 🔐 Login Page
-<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-26 232000.png" width="800"/>
-
-### 📊 Owner Dashboard
-<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-26 232148.png" width="800"/>
-
-### ⚡ Owner Device Management
-<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 125107.png" width="800"/>
-
-### 📈 Owner Analytics
-<img src="C:\Users\Admin\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 125123.png" width="800"/>
-
----
-
 
 ## 👨‍💻 My Contribution
 
