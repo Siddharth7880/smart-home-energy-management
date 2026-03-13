@@ -1,0 +1,318 @@
+.unauthorized-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 20px;
+}
+
+.unauthorized-content {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #475569;
+    border-radius: 16px;
+    padding: 48px 32px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.error-icon {
+    font-size: 80px;
+    margin-bottom: 24px;
+    display: block;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.unauthorized-content h1 {
+    color: #f8fafc;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.error-message {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* User Info Section */
+.user-info {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.user-info p {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    font-weight: 500;
+}
+
+.user-info p strong {
+    color: #f8fafc;
+}
+
+.user-info p:last-child {
+    margin-bottom: 0;
+}
+
+.roles-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.role-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #4f46e5;
+    color: #f8fafc;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.no-role {
+    color: #ef4444;
+    font-size: 13px;
+}
+
+/* Help Section */
+.help-section {
+    background: rgba(3, 102, 214, 0.1);
+    border: 1px solid #0284c7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.help-section h3 {
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.help-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-section li {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.help-section li:last-child {
+    margin-bottom: 0;
+}
+
+.help-section li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.btn-back,
+.btn-home {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-back {
+    background: #475569;
+    color: #f8fafc;
+}
+
+.btn-back:hover {
+    background: #64748b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-home {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: #f8fafc;
+}
+
+.btn-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Role Info Section */
+.role-info {
+    text-align: left;
+}
+
+.role-info h4 {
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.role-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.feature-item {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 12px;
+    border-left: 4px solid #60a5fa;
+}
+
+.feature-item strong {
+    color: #f8fafc;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    color: #cbd5e1;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .unauthorized-content {
+        padding: 32px 24px;
+    }
+
+    .unauthorized-content h1 {
+        font-size: 28px;
+    }
+
+    .error-message {
+        font-size: 14px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .role-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .unauthorized-container {
+        padding: 12px;
+    }
+
+    .unauthorized-content {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+
+    .error-icon {
+        font-size: 60px;
+        margin-bottom: 16px;
+    }
+
+    .unauthorized-content h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .error-message {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .user-info,
+    .help-section {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+
+    .help-section h3,
+    .role-info h4 {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .help-section li {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .action-buttons {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .btn-back,
+    .btn-home {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+
+    .feature-item {
+        padding: 10px;
+    }
+
+    .feature-item strong {
+        font-size: 12px;
+    }
+
+    .feature-item p {
+        font-size: 11px;
+    }
+}

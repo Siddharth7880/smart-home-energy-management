@@ -1,0 +1,39 @@
+{
+  "properties": [
+    {
+      "name": "smarthome.app.frontendBaseUrl",
+      "type": "java.lang.String",
+      "description": "Frontend base URL for reset password links and OAuth2 redirects."
+    },
+    {
+      "name": "smarthome.app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Secret key used for signing JWT tokens."
+    },
+    {
+      "name": "smarthome.app.jwtExpirationMs",
+      "type": "java.lang.Long",
+      "description": "JWT token expiration time in milliseconds."
+    },
+    {
+      "name": "smarthome.app.seeder.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable the data seeder on application startup."
+    },
+    {
+      "name": "smarthome.app.seeder.create-test-users",
+      "type": "java.lang.Boolean",
+      "description": "Whether to auto-create test users on startup."
+    },
+    {
+      "name": "smarthome.app.energyRatePerKwh",
+      "type": "java.lang.Double",
+      "description": "Energy rate per kWh in Indian Rupees."
+    },
+    {
+      "name": "spring.security.enable.method.security",
+      "type": "java.lang.Boolean",
+      "description": "Enable method-level security."
+    }
+  ]
+}
