@@ -120,6 +120,24 @@ Here is a glimpse of the application interfaces based on user roles. The UI was 
 - UI Enhancement
 - Performance Optimization
 
+### ✅ Milestone 3 — Energy Tracking & API Integration
+- IoT API Integration (Simulated / Real-time Data)
+- Real-time Energy Consumption Display
+- Total Household Energy Calculation
+- Hourly/Daily Usage Data Fetching
+
+### ✅ Milestone 4 — Analytics Dashboard
+- Charts for Energy Consumption (Daily / Weekly / Monthly)
+- Usage Comparison with Previous Data
+- Energy Cost Prediction
+- Peak vs Off-Peak Usage Analysis
+
+### ✅ Milestone 5 — Automation & Recommendations
+- Device Scheduling (ON/OFF Automation)
+- Energy Overload Alerts / Notifications
+- Personalized Energy-Saving Recommendations
+- Smart Usage Insights (e.g., Off-peak Suggestions)
+
 ## 🚀 Setup Instructions
 
 ### 1. Database Setup
