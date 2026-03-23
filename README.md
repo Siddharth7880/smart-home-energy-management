@@ -1,177 +1,291 @@
 <div align="center">
-  <h1>🌱 Smart Home Energy Management System</h1>
-  <p><i>A full-stack, comprehensive web application designed to monitor, track, and optimize smart home energy consumption. Build with security, modern UI/UX, and performance in mind.</i></p>
 
-  <!-- Badges -->
-  <p>
-    <img src="https://img.shields.io/badge/Java-17-orange.svg" alt="Java" />
-    <img src="https://img.shields.io/badge/Spring_Boot-3.4.2-6DB33F.svg?logo=spring&logoColor=white" alt="Spring Boot" />
-    <img src="https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black" alt="React" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC.svg?logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/MySQL-8.0-4479A1.svg?logo=mysql&logoColor=white" alt="MySQL" />
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" />
-  </p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=🌱%20Smart%20Home%20Energy%20Management&fontSize=36&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Monitor%20%7C%20Automate%20%7C%20Optimize%20Your%20Energy&descAlignY=55&descSize=18" width="100%"/>
 
-  <p>
-    <a href="#-tech-stack">Tech Stack</a> •
-    <a href="#-live-features">Features</a> •
-    <a href="#-my-contribution-backend-developer">My Contribution</a> •
-    <a href="#-screenshots">Screenshots</a> •
-    <a href="#-setup-instructions">Getting Started</a> •
-    <a href="#-api-endpoints">API</a>
-  </p>
+<br/>
+
+<!-- Tech Stack Badges -->
+<p>
+  <img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring_Boot-3.4.2-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white"/>
+</p>
+
+<!-- Status Badges -->
+<p>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Milestones-5%20%2F%205%20Completed-success?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square"/>
+  <img src="https://img.shields.io/github/last-commit/Siddharth7880/smart-home-energy-management?style=flat-square&color=blueviolet"/>
+</p>
+
+<br/>
+
+<p>
+  <a href="#-overview">📖 Overview</a> •
+  <a href="#%EF%B8%8F-tech-stack">🛠️ Tech Stack</a> •
+  <a href="#-live-features">✨ Features</a> •
+  <a href="#-project-milestones">🏁 Milestones</a> •
+  <a href="#-screenshots">📸 Screenshots</a> •
+  <a href="#-setup-instructions">🚀 Setup</a> •
+  <a href="#-api-endpoints">🔑 API</a> •
+  <a href="#-project-structure">📁 Structure</a>
+</p>
+
 </div>
 
 ---
 
 ## 📖 Overview
 
-The **Smart Home Energy Management System** allows homeowners to track their energy usage effortlessly, helping reduce carbon footprints and electricity bills. Built with a robust backend and a highly interactive front end, it securely manages real-time monitoring and user roles.
+> **Smart Home Energy Management System** is a **full-stack enterprise-grade web application** that empowers homeowners to intelligently monitor, analyze, and optimize their home energy consumption in real time.
+
+Built across **5 structured milestones**, the system covers everything from secure authentication to AI-driven energy recommendations and advanced automation. It is designed for **three distinct user roles** — Homeowner, Technician, and Admin — each with their own tailored dashboard and capabilities.
+
+<details>
+<summary><b>🎯 What problem does it solve?</b></summary>
+<br/>
+
+Rising electricity costs and energy waste are major challenges for modern households. This system bridges the gap between smart IoT devices and actionable energy insights — giving users the power to **track usage in real time, automate devices, receive intelligent recommendations,** and **predict energy costs** before the bill arrives.
+
+</details>
+
+---
 
 ## 🛠️ Tech Stack
 
-### Backend
-- **Java 17** with Spring Boot 3.4.2
-- **Spring Security** with JWT authentication
-- **Spring Data JPA** for database operations
-- **MySQL** database
+### 🔧 Backend
+| Technology | Purpose |
+|---|---|
+| **Java 17** | Core language |
+| **Spring Boot 3.4.2** | RESTful API framework |
+| **Spring Security + JWT** | Authentication & authorization |
+| **Spring Data JPA + Hibernate** | ORM & database operations |
+| **MySQL 8.0** | Relational database |
+| **Maven** | Build & dependency management |
+| **JUnit 5 + Mockito** | Unit & integration testing |
 
-### Frontend
-- **React 19** with Vite
-- **Tailwind CSS 4** for styling
-- **Framer Motion** for animations
-- **Axios** for API calls
-- **React Router** for navigation
+### 🎨 Frontend
+| Technology | Purpose |
+|---|---|
+| **React 19** | UI framework |
+| **Vite** | Build tool & dev server |
+| **Tailwind CSS 4** | Utility-first styling |
+| **Framer Motion** | Smooth animations & transitions |
+| **Recharts** | Energy consumption charts |
+| **Axios** | HTTP client for API calls |
+| **React Router 6** | Client-side routing |
 
-## 📋 Prerequisites
+---
 
-Before you begin, ensure you have the following installed:
-- Java 17 or higher
-- Node.js 18 or higher
-- MySQL 8.0 or higher
-- Maven (or use the included Maven wrapper)
+## ✨ Live Features
 
-## 🚀 Live Features
+<table>
+<tr>
+<td width="50%">
 
-- 🔐 Secure JWT Authentication
-- ⚡ Real-Time Energy Monitoring
-- 📊 Analytics Dashboard
-- 🏠 Smart Device Management
-- 🌙 Dark/Light Theme Toggle
-- 📱 Fully Responsive UI
+### 🔐 Authentication & Security
+- ✅ JWT-based stateless authentication
+- ✅ Google OAuth2 login
+- ✅ Email OTP verification
+- ✅ BCrypt password encryption
+- ✅ Forgot / Reset password flow
+- ✅ Role-based access control (RBAC)
+
+### ⚡ Real-Time Energy Monitoring
+- ✅ Live IoT device data simulation
+- ✅ Per-device energy consumption tracking
+- ✅ Total household energy calculation
+- ✅ Hourly & daily usage data
+
+### 📊 Analytics Dashboard
+- ✅ Daily / Weekly / Monthly charts
+- ✅ Peak vs Off-Peak usage analysis
+- ✅ Energy cost prediction
+- ✅ Usage comparison with historical data
+
+</td>
+<td width="50%">
+
+### 🤖 Automation & Recommendations
+- ✅ Device ON/OFF scheduling
+- ✅ Energy overload alerts
+- ✅ Smart energy-saving recommendations
+- ✅ Off-peak usage suggestions
+
+### 🏠 Device Management
+- ✅ Full CRUD for smart devices
+- ✅ Device status monitoring
+- ✅ Technician installation tracking
+- ✅ Device energy usage logs
+
+### 🛡️ Admin & Technician Portals
+- ✅ Admin user management
+- ✅ Role assignment
+- ✅ Platform-wide analytics
+- ✅ Technician task tracker
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🏁 Project Milestones
+
+```
+Timeline ──────────────────────────────────────────────────────────────▶
+         M1        M2        M3        M4        M5
+         ✅        ✅        ✅        ✅        ✅
+      Auth &    Device    Energy   Analytics  Automation
+      Setup     CRUD     Tracking  Dashboard    & AI
+```
+
+### ✅ Milestone 1 — Foundation
+> *Authentication, Database, Core Setup*
+- 🔐 User registration & login with JWT
+- 🗄️ MySQL database integration
+- 🏠 Basic dashboard setup
+- 👥 Role-based routing (Homeowner / Technician / Admin)
+
+---
+
+### ✅ Milestone 2 — Device Management
+> *Smart Device CRUD, Energy Tracking, UI Polish*
+- 📱 Device CRUD operations (Add, Edit, Delete, View)
+- ⚡ Energy usage log generation
+- 📊 Basic analytics visualization
+- 🎨 UI/UX enhancement with glassmorphism
+- ⚙️ Performance optimization
+
+---
+
+### ✅ Milestone 3 — Energy Tracking & API Integration
+> *Real-Time Data, IoT Simulation*
+- 🌐 IoT API integration (Simulated / Real-time data)
+- ⚡ Real-time energy consumption display
+- 🏠 Total household energy calculation
+- 📅 Hourly / Daily usage data fetching
+
+---
+
+### ✅ Milestone 4 — Analytics Dashboard
+> *Deep Insights, Predictions, Comparisons*
+- 📈 Charts for energy consumption — Daily / Weekly / Monthly
+- 📊 Usage comparison with previous period data
+- 💰 Energy cost prediction engine
+- ⏰ Peak vs Off-Peak usage analysis
+
+---
+
+### ✅ Milestone 5 — Automation & Recommendations
+> *Smart Scheduling, AI Insights, Alerts*
+- 🤖 Device scheduling (ON/OFF Automation)
+- 🚨 Energy overload alerts & notifications
+- 💡 Personalized energy-saving recommendations
+- 🌙 Smart usage insights (e.g., Off-peak Suggestions)
+
+---
 
 ## 👨‍💻 My Contribution (Backend Developer)
 
-As a primary **Backend Developer** for this project, I engineered robust and secure server-side logic to power the platform. My key contributions include:
+As the primary **Backend Developer**, I engineered the complete server-side architecture from ground up:
 
-- **Architecting the Core Engine:** Designed and implemented the Spring Boot 3.4 RESTful APIs handling authentication, role-based access control, and core entity business logic.
-- **Enterprise Security & Roles:** Programmed the JWT token lifecycle, secured endpoints based on user roles (Owner, Tech, Admin), and solved complex cross-browser permission mappings to ensure secure session continuity.
-- **Database Architecture & Optimization:** Addressed critical MySQL constraint validations (e.g., maintaining foreign key integrity and schemas for devices), ensuring secure data persistence using Spring Data JPA and Hibernate.
-- **Comprehensive Testing Suite:** Developed rigorous edge-case unit testing utilizing JUnit 5 and Mockito, thoroughly verifying Milestone 2 features including `DeviceService` and `EnergyUsageLogService` reliability under stress environments.
-- **Milestone Feature Delivery:** Orchestrated the dynamic device tracking mechanisms, energy usage log generation logic simulation, and API endpoint robustification.
+| Area | Contribution |
+|---|---|
+| 🏗️ **API Architecture** | Designed 11 REST controllers covering Auth, Devices, Analytics, Automation, IoT, Admin, and Technician APIs |
+| 🔒 **Security Engine** | Implemented full JWT lifecycle, Google OAuth2, OTP email verification, and RBAC |
+| 🗄️ **Database Design** | Modeled 11 JPA entities with proper foreign key constraints and indexed queries |
+| ⚡ **Energy Simulation** | Built the IoT data seeder that generates realistic real-time energy consumption data |
+| 🤖 **Automation System** | Implemented scheduled task executor for device ON/OFF automation with timezone handling |
+| 🧪 **Testing Suite** | JUnit 5 & Mockito tests for `DeviceService`, `EnergyUsageLogService`, and edge cases |
 
 📥 **[Download Milestone 2 Presentation (PPTX)](Milestone-2-Backend-Achievements.pptx)**
 
-<br/>
+---
 
 ## 📸 Screenshots
-
-Here is a glimpse of the application interfaces based on user roles. The UI was built with a keen eye for aesthetics, glassmorphism, and responsive behavior.
 
 ### 🚀 Onboarding
 | Registration Page | Login Page |
 | :---: | :---: |
-| <img src="registration.png" alt="Registration" width="400"/> | <img src="login.png" alt="Login" width="400"/> |
+| <img src="registration.png" alt="Registration" width="420"/> | <img src="login.png" alt="Login" width="420"/> |
 
 ### 🏠 Owner Console
 | Dashboard | Devices Overview |
 | :---: | :---: |
-| <img src="Images/Owner/Screenshot 2026-02-26 232148.png" alt="Owner Dashboard" width="400"/> | <img src="Images/Owner/Screenshot 2026-02-26 232310.png" alt="Owner Devices" width="400"/> |
+| <img src="Images/Owner/Screenshot 2026-02-26 232148.png" alt="Owner Dashboard" width="420"/> | <img src="Images/Owner/Screenshot 2026-02-26 232310.png" alt="Owner Devices" width="420"/> |
 | **Device Details** | **Device Logs** |
-| <img src="Images/Owner/Screenshot 2026-02-26 232330.png" alt="Owner Device Details" width="400"/> | <img src="Images/Owner/Screenshot 2026-02-27 125123.png" alt="Owner Device Logs" width="400"/> |
+| <img src="Images/Owner/Screenshot 2026-02-26 232330.png" alt="Owner Device Details" width="420"/> | <img src="Images/Owner/Screenshot 2026-02-27 125123.png" alt="Owner Device Logs" width="420"/> |
 
 ### 🔧 Technician Console
 | Main Dashboard | Assigned Installations |
 | :---: | :---: |
-| <img src="Images/Tech/Screenshot 2026-02-27 130847.png" alt="Technician Dashboard" width="400"/> | <img src="Images/Tech/Screenshot 2026-02-27 130902.png" alt="Technician Installations" width="400"/> |
+| <img src="Images/Tech/Screenshot 2026-02-27 130847.png" alt="Technician Dashboard" width="420"/> | <img src="Images/Tech/Screenshot 2026-02-27 130902.png" alt="Technician Installations" width="420"/> |
 
 ### 🛡️ Admin Console
-| Platform Dashboard (Overview) | Dashboard Highlights |
+| Platform Dashboard | Dashboard Highlights |
 | :---: | :---: |
-| <img src="Images/Admin/Screenshot 2026-02-27 131059.png" alt="Admin Dashboard Overview" width="400"/> | <img src="Images/Admin/Screenshot 2026-02-27 131118.png" alt="Admin Dashboard Detail" width="400"/> |
-| **Admin System Details** | **Device Registry** |
-| <img src="Images/Admin/Screenshot 2026-02-27 131131.png" alt="Admin Details" width="400"/> | <img src="Images/Admin/Screenshot 2026-02-27 131141.png" alt="Admin Device Details" width="400"/> |
+| <img src="Images/Admin/Screenshot 2026-02-27 131059.png" alt="Admin Dashboard Overview" width="420"/> | <img src="Images/Admin/Screenshot 2026-02-27 131118.png" alt="Admin Dashboard Detail" width="420"/> |
+| **System Details** | **Device Registry** |
+| <img src="Images/Admin/Screenshot 2026-02-27 131131.png" alt="Admin Details" width="420"/> | <img src="Images/Admin/Screenshot 2026-02-27 131141.png" alt="Admin Device Details" width="420"/> |
 | **Technician Management** | |
-| <img src="Images/Admin/Screenshot 2026-02-27 131200.png" alt="Admin Technician Details" width="400"/> | |
+| <img src="Images/Admin/Screenshot 2026-02-27 131200.png" alt="Admin Technician Details" width="420"/> | |
 
-<br/>
-
-## 📂 Project Milestones
-
-### ✅ Milestone 1
-- Authentication
-- Database Integration
-- Basic Dashboard
-
-### ✅ Milestone 2
-- Device CRUD Operations
-- Energy Tracking
-- Analytics Visualization
-- UI Enhancement
-- Performance Optimization
-
-### ✅ Milestone 3 — Energy Tracking & API Integration
-- IoT API Integration (Simulated / Real-time Data)
-- Real-time Energy Consumption Display
-- Total Household Energy Calculation
-- Hourly/Daily Usage Data Fetching
-
-### ✅ Milestone 4 — Analytics Dashboard
-- Charts for Energy Consumption (Daily / Weekly / Monthly)
-- Usage Comparison with Previous Data
-- Energy Cost Prediction
-- Peak vs Off-Peak Usage Analysis
-
-### ✅ Milestone 5 — Automation & Recommendations
-- Device Scheduling (ON/OFF Automation)
-- Energy Overload Alerts / Notifications
-- Personalized Energy-Saving Recommendations
-- Smart Usage Insights (e.g., Off-peak Suggestions)
+---
 
 ## 🚀 Setup Instructions
 
-### 1. Database Setup
+### 📋 Prerequisites
+Make sure you have the following installed:
+
+| Tool | Version |
+|---|---|
+| Java | 17+ |
+| Node.js | 18+ |
+| MySQL | 8.0+ |
+| Maven | 3.8+ |
+
+---
+
+### 1️⃣ Database Setup
 
 1. Start your MySQL server
-2. The application will automatically create the database `smart_home_energy` on first run
+2. The application **automatically creates** the database `smart_home_energy` on first run
 3. Copy the example config and fill in your credentials:
-   ```bash
-   cp backend/src/main/resources/application.properties.example backend/src/main/resources/application.properties
-   ```
 
-> **Note:** Edit `backend/src/main/resources/application.properties` with your MySQL credentials, email (Gmail App Password), Google OAuth client ID/secret, and JWT secret. See `application.properties.example` for all required keys.
+```bash
+cp backend/src/main/resources/application.properties.example \
+   backend/src/main/resources/application.properties
+```
 
-### 2. Backend Setup
+> **⚠️ Important:** Edit `application.properties` with your MySQL credentials, Gmail App Password, Google OAuth Client ID/Secret, and JWT secret. See the `.example` file for all required keys.
 
-Navigate to the backend directory and run:
+---
+
+### 2️⃣ Backend Setup
 
 ```bash
 cd backend
 
-# Using Maven wrapper (Windows)
+# Windows (Maven Wrapper)
 mvnw.cmd clean install
 mvnw.cmd spring-boot:run
 
-# Or using Maven directly
-mvn clean install
-mvn spring-boot:run
+# Linux / Mac
+./mvnw clean install
+./mvnw spring-boot:run
 ```
 
-The backend will start on `http://localhost:8080`
+✅ Backend starts at: **`http://localhost:8080`**
 
-### 3. Frontend Setup
+---
 
-Open a new terminal, navigate to the frontend directory and run:
+### 3️⃣ Frontend Setup
 
 ```bash
 cd frontend
@@ -179,163 +293,285 @@ cd frontend
 # Install dependencies
 npm install
 
-# Start development server
+# Start dev server
 npm run dev
 ```
 
-The frontend will start on `http://localhost:5173`
+✅ Frontend starts at: **`http://localhost:5173`**
 
-## 🎨 Features
+---
 
-### Authentication
-- User registration with email validation
-- Secure login with JWT tokens
-- Password encryption with BCrypt
-- Forgot password functionality
-- Remember me option
+### ⚡ Quick Start (Windows One-Click)
 
-### User Roles
-- Homeowner
-- Technician
-- Admin
+```bash
+# From project root
+start.bat
+```
 
-### Design Theme
-- **Primary Color:** Green/Emerald theme for eco-friendly energy management
-- Modern, responsive UI with smooth animations
-- Glass-morphism design elements
-- Dark mode support (coming soon)
+> This script starts both the backend and frontend simultaneously.
 
-## 📱 Pages
-
-1. **Home** - Landing page with system overview
-2. **Login** - User authentication (Green-themed)
-3. **Register** - New user registration
-4. **Dashboard** - User dashboard with energy monitoring
-5. **Forgot Password** - Password recovery
+---
 
 ## 🔑 API Endpoints
 
-### Authentication
-- `POST /api/auth/signup` - Register new user
-- `POST /api/auth/signin` - User login
-- `POST /api/auth/forgot-password` - Password reset
+### 🔐 Authentication — `/api/auth`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `POST` | `/signup` | Register new user | ❌ |
+| `POST` | `/signin` | Login & get JWT | ❌ |
+| `POST` | `/forgot-password` | Send reset email | ❌ |
+| `POST` | `/reset-password` | Reset with token | ❌ |
+| `POST` | `/verify-otp` | OTP email verification | ❌ |
 
-### Test Endpoints
-- `GET /api/test/all` - Public content
-- `GET /api/test/user` - User content (requires authentication)
-- `GET /api/test/tech` - Technician content (requires TECH role)
-- `GET /api/test/admin` - Admin content (requires ADMIN role)
+### 📱 Devices — `/api/devices`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/` | Get all user devices | ✅ |
+| `POST` | `/` | Add new device | ✅ |
+| `PUT` | `/{id}` | Update device | ✅ |
+| `DELETE` | `/{id}` | Delete device | ✅ |
+| `GET` | `/{id}/logs` | Get device energy logs | ✅ |
 
-## 🔒 Security
+### 📊 Analytics — `/api/analytics`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/energy/daily` | Daily usage data | ✅ |
+| `GET` | `/energy/weekly` | Weekly usage data | ✅ |
+| `GET` | `/energy/monthly` | Monthly usage data | ✅ |
+| `GET` | `/energy/comparison` | Historical comparison | ✅ |
+| `GET` | `/energy/cost` | Cost prediction | ✅ |
 
-- JWT-based authentication
-- Password encryption using BCrypt
-- CORS enabled for frontend communication
-- Session management with Spring Security
-- Protected routes on both frontend and backend
+### 🤖 Automation — `/api/schedules`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/` | Get all schedules | ✅ |
+| `POST` | `/` | Create schedule | ✅ |
+| `PUT` | `/{id}` | Update schedule | ✅ |
+| `DELETE` | `/{id}` | Delete schedule | ✅ |
+
+### 🌐 IoT & Alerts — `/api/iot`, `/api/alerts`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/iot/current` | Live energy readings | ✅ |
+| `GET` | `/alerts` | Get energy alerts | ✅ |
+| `PUT` | `/alerts/{id}/read` | Mark alert as read | ✅ |
+
+### 🛡️ Admin — `/api/admin`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/users` | All users | ADMIN |
+| `PUT` | `/users/{id}/role` | Change user role | ADMIN |
+| `DELETE` | `/users/{id}` | Delete user | ADMIN |
+| `GET` | `/stats` | Platform statistics | ADMIN |
+
+### 🔧 Technician — `/api/technician`
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/installations` | Assigned installations | TECH |
+| `PUT` | `/installations/{id}` | Update install status | TECH |
+
+---
 
 ## 📁 Project Structure
 
 ```
-Smart Home Energy Management System/
-├── backend/
-│   ├── src/main/java/com/smarthome/energy/
-│   │   ├── config/          # Security and app configuration
-│   │   ├── controller/      # REST API controllers
-│   │   ├── dto/             # Data Transfer Objects
-│   │   ├── model/           # Entity models
-│   │   ├── repository/      # JPA repositories
-│   │   ├── security/        # JWT and security services
-│   │   └── service/         # Business logic services
-│   └── src/main/resources/
-│       └── application.properties  # App configuration
-├── frontend/
-│   ├── src/
-│   │   ├── components/      # Reusable React components
-│   │   ├── context/         # React Context (Auth, Theme)
-│   │   ├── pages/           # Page components
-│   │   └── services/        # API services
-│   └── package.json
-└── README.md
+smart-home-energy-management/
+│
+├── 📂 backend/
+│   └── src/main/java/com/smarthome/energy/
+│       ├── 📂 config/          # Security, CORS, OAuth2 config
+│       ├── 📂 controller/      # 11 REST API controllers
+│       │   ├── AuthController.java
+│       │   ├── DeviceController.java
+│       │   ├── AnalyticsController.java
+│       │   ├── DeviceScheduleController.java
+│       │   ├── IoTController.java
+│       │   ├── AlertController.java
+│       │   ├── InsightController.java
+│       │   ├── AdminController.java
+│       │   ├── TechnicianController.java
+│       │   ├── UsageLogController.java
+│       │   └── TestController.java
+│       ├── 📂 dto/             # Request / Response DTOs
+│       ├── 📂 exception/       # Global exception handlers
+│       ├── 📂 model/           # 11 JPA entity models
+│       │   ├── User.java
+│       │   ├── Device.java
+│       │   ├── EnergyUsageLog.java
+│       │   ├── DeviceSchedule.java
+│       │   ├── EnergyAlert.java
+│       │   ├── EnergyThreshold.java
+│       │   ├── Installation.java
+│       │   └── Role.java / ERole.java
+│       ├── 📂 repository/      # Spring Data JPA repositories
+│       ├── 📂 security/        # JWT filter, UserDetails, OAuth2
+│       └── 📂 service/         # Business logic layer
+│
+├── 📂 frontend/
+│   └── src/
+│       ├── 📂 components/      # 15 reusable components
+│       │   ├── Navbar.jsx
+│       │   ├── EnergyCharts.jsx
+│       │   ├── DeviceCard.jsx
+│       │   ├── SummaryCard.jsx
+│       │   └── ...
+│       ├── 📂 pages/           # 15 page components
+│       │   ├── Home.jsx
+│       │   ├── Dashboard.jsx
+│       │   ├── Analytics.jsx
+│       │   ├── Automation.jsx
+│       │   ├── DeviceManager.jsx
+│       │   ├── AdminDashboard.jsx
+│       │   ├── TechnicianTracker.jsx
+│       │   ├── Login.jsx / Register.jsx
+│       │   └── ...
+│       ├── 📂 context/         # Auth & Theme context
+│       ├── 📂 services/        # Axios API services
+│       └── 📂 styles/          # Global styles
+│
+├── 📂 Images/                  # Screenshots (Owner / Tech / Admin)
+├── 📂 screenshots/             # Additional UI screenshots
+├── 🔧 start.bat                # One-click start script (Windows)
+├── 📄 README.md
+└── 📦 package-lock.json
 ```
 
-## 🎨 Color Scheme
+---
 
-The application uses a green color palette to represent eco-friendly energy management:
+## 🔒 Security Architecture
 
-- **Primary:** Green (#16a34a) to Emerald (#059669)
-- **Background:** Green gradient (green-50 to emerald-50)
-- **Accents:** Various shades of green for interactive elements
-- **Text:** Slate colors for optimal readability
+```
+Request
+  │
+  ▼
+JWT Filter ──────▶ Token Valid? ──No──▶ 401 Unauthorized
+  │                    │
+  │                   Yes
+  │                    │
+  ▼                    ▼
+Security Context    Role Check ──────▶ 403 Forbidden
+                        │
+                       Pass
+                        │
+                        ▼
+                   Controller Logic
+```
 
-## 🔧 Configuration
+- JWT tokens with configurable expiry
+- BCrypt password hashing (strength 10)
+- CORS configured for frontend origin
+- Spring Security endpoint-level protection
+- Google OAuth2 social login integration
 
-### Backend Configuration
-Copy `backend/src/main/resources/application.properties.example` → `application.properties` and fill in your values:
+---
 
+## ⚙️ Configuration Reference
+
+### Backend — `application.properties`
 ```properties
 # Database
-spring.datasource.url=jdbc:mysql://localhost:3306/smart_database?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.url=jdbc:mysql://localhost:3306/smart_home_energy?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=Asia/Kolkata
 spring.datasource.username=root
 spring.datasource.password=YOUR_MYSQL_PASSWORD
 
-# JWT Secret (use a long random string in production)
-smarthome.app.jwtSecret=REPLACE_WITH_A_LONG_RANDOM_SECRET_KEY
+# JWT
+smarthome.app.jwtSecret=REPLACE_WITH_LONG_RANDOM_SECRET_KEY_MIN_256_BITS
 smarthome.app.jwtExpirationMs=86400000
 
-# Gmail App Password (generate at https://myaccount.google.com/apppasswords)
+# Gmail (App Password — not your actual password)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
 spring.mail.username=YOUR_EMAIL@gmail.com
 spring.mail.password=YOUR_GMAIL_APP_PASSWORD
 
-# Google OAuth2 (https://console.cloud.google.com/)
-spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID
-spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET
+# Google OAuth2 — https://console.cloud.google.com/
+spring.security.oauth2.client.registration.google.client-id=YOUR_CLIENT_ID
+spring.security.oauth2.client.registration.google.client-secret=YOUR_CLIENT_SECRET
 ```
 
-### Frontend Configuration
-Edit `frontend/src/services/api.js`:
-
+### Frontend — `src/services/api.js`
 ```javascript
 const API_BASE_URL = 'http://localhost:8080/api';
 ```
 
+---
+
 ## 🐛 Troubleshooting
 
-### Backend Issues
-- **Port 8080 already in use:** Change the port in `application.properties`
-- **Database connection failed:** Verify MySQL is running and credentials are correct
-- **Build errors:** Ensure Java 17+ is installed
+<details>
+<summary><b>🔴 Backend won't start</b></summary>
 
-### Frontend Issues
-- **Port 5173 already in use:** Vite will automatically use the next available port
-- **API connection failed:** Verify backend is running on port 8080
-- **Dependencies error:** Delete `node_modules` and run `npm install` again
+- Ensure MySQL is running: `net start MySQL80` (Windows)
+- Verify credentials in `application.properties`
+- Check Java version: `java -version` (must be 17+)
+- Port conflict: Change `server.port` in `application.properties`
 
-## 📝 Default Test Credentials
+</details>
 
-After first run, you can create users through the registration page. The system starts with an empty database.
+<details>
+<summary><b>🔴 Frontend API errors</b></summary>
 
-## 🔜 Future Features
+- Confirm backend is running at `http://localhost:8080`
+- Check browser console for CORS errors
+- Delete `node_modules` and run `npm install` again
 
-- Real-time energy consumption monitoring
-- Device management and control
-- Energy usage analytics and reports
-- Bill estimation and predictions
-- Mobile app support
-- Smart device integration
-- Email notifications
-- Admin panel for user management
+</details>
+
+<details>
+<summary><b>🔴 Email / OTP not sending</b></summary>
+
+- Use a **Gmail App Password**, not your actual Gmail password
+- Enable 2FA on your Google account first
+- Generate App Password at: https://myaccount.google.com/apppasswords
+
+</details>
+
+<details>
+<summary><b>🔴 Google OAuth login fails</b></summary>
+
+- Add `http://localhost:8080/login/oauth2/code/google` as an authorized redirect URI in Google Cloud Console
+- Ensure client ID and secret are correctly set
+
+</details>
+
+---
+
+## 🔜 Upcoming / Future Features
+
+- [ ] 📱 Progressive Web App (PWA) support
+- [ ] 🤖 AI-based monthly bill prediction (ML model)
+- [ ] 📡 Real hardware IoT device integration (MQTT)
+- [ ] 🌍 Carbon footprint tracker
+- [ ] 🏆 Gamification — energy saving challenges & badges
+- [ ] 📊 Exportable PDF/CSV energy reports
+- [ ] 🔔 Push notification support
+- [ ] 🌐 Multi-home / multi-location support
+
+---
 
 ## 📄 License
 
-This project is for educational purposes.
+This project is built for **educational purposes** as part of a structured software engineering curriculum.
 
-## 👥 Support
+---
 
-For issues or questions, please create an issue in the project repository.
+## 👥 Support & Contribution
 
-<hr/>
+- 🐛 **Found a bug?** Open an [issue](https://github.com/Siddharth7880/smart-home-energy-management/issues)
+- 💡 **Have a feature idea?** Start a [discussion](https://github.com/Siddharth7880/smart-home-energy-management/discussions)
+- 🔀 **Want to contribute?** PRs are welcome!
+
+---
+
 <div align="center">
-  <b>Built with ❤️ for a Greener Tomorrow.</b><br/>
-  🚀⚡
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%"/>
+
+<b>Built with ❤️ for a Greener Tomorrow 🌱</b><br/>
+<sub>Smart Home Energy Management System — Full Stack | Spring Boot + React</sub>
+
+<br/><br/>
+
+⭐ **Star this repo if you found it helpful!** ⭐
+
 </div>
