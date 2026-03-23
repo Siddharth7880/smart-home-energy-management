@@ -229,10 +229,6 @@ Timeline ───────────────────────�
 |:---:|---|:---:|
 | 🎯 **Milestones 1 – 5** | Complete Project Presentation — Authentication, Device Management, Energy Tracking, Analytics Dashboard, Automation & Recommendations | [📥 Download PPTX](Smart-Home-Energy-Management-All-Milestones.pptx) |
 
-> 💡 **How to upload your PPT:**
-> 1. Rename your file to `Smart-Home-Energy-Management-All-Milestones.pptx`
-> 2. Place it in the **root of this repository** (same folder as `README.md`)
-> 3. Run: `git add . && git commit -m "Add full project presentation" && git push origin main`
 
 ---
 
