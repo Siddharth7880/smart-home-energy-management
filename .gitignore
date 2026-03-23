@@ -1,0 +1,49 @@
+# ===========================
+# Root .gitignore
+# Smart Home Energy Management System
+# ===========================
+
+# ── OS Files ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE & Editor ─────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+
+# ── Backend (Maven / Spring Boot) ────────────────────
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/mvnw
+!backend/mvnw.cmd
+backend/*.log
+
+# Sensitive config — never commit real credentials!
+backend/src/main/resources/application.properties
+backend/src/main/resources/application-*.properties
+
+# ── Frontend (Node / Vite / React) ───────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/.env.local
+
+# npm / yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite cache
+frontend/.vite/
+
+# ── Logs ─────────────────────────────────────────────
+*.log
+logs/

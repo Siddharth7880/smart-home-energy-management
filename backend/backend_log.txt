@@ -1,0 +1,1081 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.smarthome:energy >------------------------
+[INFO] Building energy 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.2:run (default-cli) > test-compile @ energy >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ energy ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ energy ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ energy ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ energy ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.2:run (default-cli) < test-compile @ energy <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.2:run (default-cli) @ energy ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-03-13T22:25:01.387+05:30  INFO 24628 --- [energy] [           main] com.smarthome.energy.EnergyApplication   : Starting EnergyApplication using Java 25.0.2 with PID 24628 (C:\Users\munwa\Downloads\Milestone 3\Milestone 3\Main\backend\target\classes started by munwa in C:\Users\munwa\Downloads\Milestone 3\Milestone 3\Main\backend)
+2026-03-13T22:25:01.391+05:30 DEBUG 24628 --- [energy] [           main] com.smarthome.energy.EnergyApplication   : Running with Spring Boot v3.4.2, Spring v6.2.2
+2026-03-13T22:25:01.392+05:30  INFO 24628 --- [energy] [           main] com.smarthome.energy.EnergyApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-03-13T22:25:02.587+05:30  INFO 24628 --- [energy] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-13T22:25:02.694+05:30  INFO 24628 --- [energy] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 6 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/munwa/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-03-13T22:25:03.601+05:30  INFO 24628 --- [energy] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-13T22:25:03.631+05:30  INFO 24628 --- [energy] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-13T22:25:03.631+05:30  INFO 24628 --- [energy] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-03-13T22:25:03.754+05:30  INFO 24628 --- [energy] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-13T22:25:03.755+05:30  INFO 24628 --- [energy] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2265 ms
+2026-03-13T22:25:03.981+05:30  INFO 24628 --- [energy] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-13T22:25:04.118+05:30  INFO 24628 --- [energy] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-03-13T22:25:04.202+05:30  INFO 24628 --- [energy] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-13T22:25:04.693+05:30  INFO 24628 --- [energy] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-13T22:25:04.750+05:30  INFO 24628 --- [energy] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-13T22:25:04.967+05:30  INFO 24628 --- [energy] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60ed0b9d
+2026-03-13T22:25:04.969+05:30  INFO 24628 --- [energy] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-13T22:25:05.044+05:30  WARN 24628 --- [energy] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-13T22:25:05.069+05:30  INFO 24628 --- [energy] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.45
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-13T22:25:06.778+05:30  INFO 24628 --- [energy] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table roles modify column name enum ('ROLE_ADMIN','ROLE_HOMEOWNER','ROLE_TECHNICIAN')
+2026-03-13T22:25:06.924+05:30  INFO 24628 --- [energy] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-13T22:25:07.376+05:30 DEBUG 24628 --- [energy] [           main] c.s.energy.security.jwt.AuthTokenFilter  : Filter 'authenticationJwtTokenFilter' configured for use
+2026-03-13T22:25:07.463+05:30  INFO 24628 --- [energy] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-13T22:25:09.267+05:30  INFO 24628 --- [energy] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-13T22:25:09.268+05:30  WARN 24628 --- [energy] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-13T22:25:09.394+05:30  WARN 24628 --- [energy] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-13T22:25:09.646+05:30 DEBUG 24628 --- [energy] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 70 mappings in 'requestMappingHandlerMapping'
+2026-03-13T22:25:09.751+05:30 DEBUG 24628 --- [energy] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-03-13T22:25:09.832+05:30 DEBUG 24628 --- [energy] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-13T22:25:09.912+05:30 DEBUG 24628 --- [energy] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-13T22:25:09.965+05:30 DEBUG 24628 --- [energy] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-13T22:25:10.136+05:30  INFO 24628 --- [energy] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-13T22:25:10.146+05:30  INFO 24628 --- [energy] [           main] com.smarthome.energy.EnergyApplication   : Started EnergyApplication in 9.411 seconds (process running for 9.906)
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+Hibernate: select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+Hibernate: select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+Hibernate: select u1_0.id from users u1_0 where u1_0.username=? limit ?
+Hibernate: select u1_0.id from users u1_0 where u1_0.username=? limit ?
+Hibernate: select u1_0.id from users u1_0 where u1_0.username=? limit ?
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: select count(d1_0.id) from devices d1_0 left join users u1_0 on u1_0.id=d1_0.user_id where u1_0.id=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:10.308+05:30  INFO 24628 --- [energy] [           main] com.smarthome.energy.config.DataSeeder   : Demo devices already exist for homeowner_user – skipping seed.
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:10.312+05:30  INFO 24628 --- [energy] [           main] c.s.energy.service.DatasetImportService  : Loading dataset from: C:\Users\munwa\Downloads\Milestone 3\Milestone 3\Main\backend\..\..\smart_home_energy_usage_dataset.csv
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:10.326+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:25:10.260164500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:10.386+05:30  INFO 24628 --- [energy] [   scheduling-1] c.s.e.service.EnergySimulatorService     : EnergySimulator tick @ 2026-03-13T22:25:10.344154500: logged 13 entries for 13 online devices.
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: update devices set description=?,installation_id=?,installation_date=?,is_deleted=?,is_online=?,last_active=?,location=?,name=?,power_rating=?,status=?,turned_on_at=?,type=?,updated_at=?,user_id=? where id=?
+Hibernate: select evo1_0.id,evo1_0.created_at,evo1_0.email,evo1_0.expiry_time,evo1_0.otp,evo1_0.verified from email_verification_otp evo1_0 where evo1_0.expiry_time<?
+2026-03-13T22:25:11.744+05:30  INFO 24628 --- [energy] [           main] c.s.energy.service.DatasetImportService  : Dataset loaded: 1000000 rows, 6 appliance types.
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select eul1_0.id,eul1_0.cost,eul1_0.created_at,eul1_0.device_id,eul1_0.duration_minutes,eul1_0.energy_used,eul1_0.timestamp from energy_usage_logs eul1_0 left join devices d1_0 on d1_0.id=eul1_0.device_id where d1_0.id=? and eul1_0.timestamp between ? and ?
+Hibernate: select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+Hibernate: select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+Hibernate: select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:20.165+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:25:20.149233800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:30.165+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:25:30.148977800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:40.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:25:40.149354900: 13 readings generated
+2026-03-13T22:25:42.892+05:30  INFO 24628 --- [energy] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-13T22:25:42.893+05:30  INFO 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-13T22:25:42.893+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-03-13T22:25:42.893+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-03-13T22:25:42.893+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-03-13T22:25:42.894+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@24fb3e2a
+2026-03-13T22:25:42.895+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@47fd0905
+2026-03-13T22:25:42.895+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-03-13T22:25:42.895+05:30  INFO 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-13T22:25:42.908+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/signin
+2026-03-13T22:25:42.916+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-13T22:25:42.917+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/signin
+2026-03-13T22:25:42.919+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signin", parameters={}
+2026-03-13T22:25:42.921+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smarthome.energy.controller.AuthController#authenticateUser(LoginRequest)
+2026-03-13T22:25:42.989+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.smarthome.energy.dto.LoginRequest@35a2d3ea]
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.email=?
+Hibernate: select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-03-13T22:25:43.241+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-13T22:25:43.292+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-13T22:25:43.294+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.smarthome.energy.dto.JwtResponse@59dd9c62]
+2026-03-13T22:25:43.301+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-13T22:25:43.784+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/analytics/technician/device-health
+2026-03-13T22:25:43.785+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-13T22:25:43.787+05:30 ERROR 24628 --- [energy] [nio-8080-exec-1] c.s.e.security.jwt.AuthEntryPointJwt     : Unauthorized error: Full authentication is required to access this resource
+2026-03-13T22:25:43.915+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/analytics/admin/global?period=weekly
+2026-03-13T22:25:43.915+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-13T22:25:43.916+05:30 ERROR 24628 --- [energy] [nio-8080-exec-3] c.s.e.security.jwt.AuthEntryPointJwt     : Unauthorized error: Full authentication is required to access this resource
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:25:50.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:25:50.149457900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:26:00.173+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:26:00.149136600: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:26:10.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:26:10.151459500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:26:20.185+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:26:20.148860900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:26:30.166+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:26:30.148858200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:26:40.164+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:26:40.149365100: 13 readings generated
+2026-03-13T22:26:46.804+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/signin
+2026-03-13T22:26:46.804+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-13T22:26:46.804+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/signin
+2026-03-13T22:26:46.804+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signin", parameters={}
+2026-03-13T22:26:46.804+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smarthome.energy.controller.AuthController#authenticateUser(LoginRequest)
+2026-03-13T22:26:46.806+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.smarthome.energy.dto.LoginRequest@51d33e33]
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.email=?
+Hibernate: select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-03-13T22:26:46.905+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-13T22:26:46.909+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-13T22:26:46.910+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.smarthome.energy.dto.JwtResponse@7151f25]
+2026-03-13T22:26:46.910+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-13T22:26:47.399+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/analytics/technician/device-health
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-03-13T22:26:47.430+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/analytics/technician/device-health
+2026-03-13T22:26:47.431+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/analytics/technician/device-health", parameters={}
+2026-03-13T22:26:47.431+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smarthome.energy.controller.AnalyticsController#getTechnicianDeviceHealth()
+2026-03-13T22:26:47.432+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.smarthome.energy.controller.AnalyticsController.getTechnicianDeviceHealth(); target is of class [com.smarthome.energy.controller.AnalyticsController]
+2026-03-13T22:26:47.459+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.smarthome.energy.controller.AnalyticsController.getTechnicianDeviceHealth(); target is of class [com.smarthome.energy.controller.AnalyticsController]
+2026-03-13T22:26:47.460+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.smarthome.energy.exception.GlobalExceptionHandler#handleGeneral(Exception)
+2026-03-13T22:26:47.462+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-13T22:26:47.462+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-03-13T22:26:47.461958, status=500, error=Internal Server Error, message=An unexpecte (truncated)...]
+2026-03-13T22:26:47.464+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?EnergyUsageLog cannot be resolved to a type<EOL>]
+2026-03-13T22:26:47.465+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-03-13T22:26:47.661+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/analytics/admin/global?period=weekly
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.email_verified,u1_0.first_name,u1_0.last_name,u1_0.oauth_id,u1_0.oauth_provider,u1_0.password_hash,u1_0.profile_picture_url,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-03-13T22:26:47.671+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/analytics/admin/global?period=weekly
+2026-03-13T22:26:47.671+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/analytics/admin/global?period=weekly", parameters={masked}
+2026-03-13T22:26:47.671+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smarthome.energy.controller.AnalyticsController#getAdminGlobalAnalytics(String)
+2026-03-13T22:26:47.676+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.smarthome.energy.controller.AnalyticsController.getAdminGlobalAnalytics(java.lang.String); target is of class [com.smarthome.energy.controller.AnalyticsController]
+2026-03-13T22:26:47.676+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.smarthome.energy.controller.AnalyticsController.getAdminGlobalAnalytics(java.lang.String); target is of class [com.smarthome.energy.controller.AnalyticsController]
+Hibernate: select coalesce(sum(eul1_0.energy_used),0.0) from energy_usage_logs eul1_0 where eul1_0.timestamp between ? and ?
+Hibernate: select coalesce(sum(eul1_0.cost),0.0) from energy_usage_logs eul1_0 where eul1_0.timestamp between ? and ?
+Hibernate: select count(*) from devices d1_0
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: select count(*) from users u1_0
+Hibernate: SELECT HOUR(e.timestamp) AS hr, SUM(e.energy_used) AS total FROM energy_usage_logs e WHERE e.timestamp BETWEEN ? AND ? GROUP BY HOUR(e.timestamp) ORDER BY total DESC LIMIT 1
+2026-03-13T22:26:47.823+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.smarthome.energy.exception.GlobalExceptionHandler#handleGeneral(Exception)
+2026-03-13T22:26:47.823+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-13T22:26:47.823+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-03-13T22:26:47.823182400, status=500, error=Internal Server Error, message=An unexpe (truncated)...]
+2026-03-13T22:26:47.824+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class java.lang.Number ([Ljava.lang.Object; and java.lang.Number are in module java.base of loader 'bootstrap')]
+2026-03-13T22:26:47.824+05:30 DEBUG 24628 --- [energy] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:26:50.165+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:26:50.148269100: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:27:00.167+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:27:00.148754800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:27:10.164+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:27:10.149164100: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:27:20.162+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:27:20.149066100: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:27:30.158+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:27:30.148078600: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:27:40.207+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:27:40.157613300: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:27:50.175+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:27:50.150421600: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:28:00.184+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:28:00.150418500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:28:10.186+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:28:10.152621100: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:28:20.175+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:28:20.147346500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:28:30.156+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:28:30.148544800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:28:40.159+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:28:40.148994200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:28:50.160+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:28:50.149228500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:29:00.185+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:29:00.150775: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:29:10.188+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:29:10.153206300: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:29:20.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:29:20.150938600: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:29:30.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:29:30.150893100: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:29:40.169+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:29:40.150662500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:29:50.177+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:29:50.151005: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:30:00.172+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:30:00.153851700: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:30:10.161+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:30:10.149680900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:30:20.167+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:30:20.152456500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:30:30.168+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:30:30.152539: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:30:40.170+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:30:40.150779: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:30:50.158+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:30:50.148470800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:31:00.169+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:31:00.152241900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:31:10.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:31:10.152896900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:31:20.174+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:31:20.149972500: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:31:30.169+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:31:30.150169400: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:31:40.194+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:31:40.152146800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:31:50.165+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:31:50.150001900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:32:00.167+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:32:00.152522900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:32:10.156+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:32:10.149905200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:32:20.167+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:32:20.152005200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:32:30.156+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:32:30.147915600: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:32:40.168+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:32:40.151035: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:32:50.168+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:32:50.151840800: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:33:00.175+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:33:00.150061600: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:33:10.198+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:33:10.154552200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:33:20.197+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:33:20.163571200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:33:30.168+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:33:30.151304: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:33:40.171+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:33:40.151385300: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:33:50.197+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:33:50.164513200: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:34:00.178+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:34:00.161997700: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:34:10.166+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:34:10.156439900: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:34:20.182+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:34:20.162084: 13 readings generated
+Hibernate: select d1_0.id,d1_0.created_at,d1_0.description,d1_0.installation_id,d1_0.installation_date,d1_0.is_deleted,d1_0.is_online,d1_0.last_active,d1_0.location,d1_0.name,d1_0.power_rating,d1_0.status,d1_0.turned_on_at,d1_0.type,d1_0.updated_at,d1_0.user_id from devices d1_0 where d1_0.is_online=? and not(d1_0.is_deleted)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+Hibernate: insert into energy_usage_logs (cost,created_at,device_id,duration_minutes,energy_used,timestamp) values (?,?,?,?,?,?)
+2026-03-13T22:34:30.182+05:30 DEBUG 24628 --- [energy] [   scheduling-1] c.s.energy.service.IoTSimulatorService   : IoTSimulator tick @ 2026-03-13T22:34:30.162210800: 13 readings generated
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  09:41 min
+[INFO] Finished at: 2026-03-13T22:34:39+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.2:run (default-cli) on project energy: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

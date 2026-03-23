@@ -1,0 +1,66 @@
+/* ============================================================
+   Analytics Dashboard — Custom Styles
+   ============================================================ */
+
+/* ── Rate Input ─────────────────────────────────────────────── */
+.rate-input {
+  background: var(--glass-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-color);
+  width: 110px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rate-input:focus {
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.rate-input::placeholder {
+  opacity: 0.5;
+  color: var(--text-secondary);
+}
+
+/* ── Comparison Arrow Badges ────────────────────────────────── */
+.comparison-badge-up {
+  background: rgba(239, 68, 68, 0.12);
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.comparison-badge-down {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* ── Peak / Off-Peak Bar Colors ─────────────────────────────── */
+.peak-bar {
+  fill: #F59E0B;
+}
+
+.off-peak-bar {
+  fill: #10B981;
+}
+
+/* ── Section Divider ────────────────────────────────────────── */
+.analytics-section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  margin: 8px 0;
+}
+
+/* ── Responsive overrides ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .rate-input {
+    width: 90px;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
